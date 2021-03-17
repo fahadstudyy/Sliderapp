@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private SliderAdapter slideradapter;
 
-//    private static int SPLASH_SCREEN = 5000;
+    private static int SPLASH_SCREEN = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
         addDotsIndicator(0);
 
         mSlideViewPage.addOnPageChangeListener(viewListner);
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                Intent intent = new Intent(MainActivity.this, login.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        },SPLASH_SCREEN);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, login.class);
+                startActivity(intent);
+                finish();
+            }
+        },SPLASH_SCREEN);
     }
 
     public void addDotsIndicator(int position){
